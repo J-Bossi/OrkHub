@@ -31,7 +31,7 @@ namespace OpenResKit.DomainModel
     {
       m_DomainEntityConfigurations = domainEntityConfigurations;
       Database.SetInitializer(initializer);
-      //Database.Initialize(true);
+      Database.Initialize(true);
     }
 
     protected override void OnModelCreating(DbModelBuilder modelBuilder)

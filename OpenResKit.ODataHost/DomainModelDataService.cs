@@ -18,13 +18,14 @@ using System;
 using System.ComponentModel.Composition;
 using System.Data.Services;
 using System.Data.Services.Common;
+using System.Data.Services.Providers;
 using System.ServiceModel;
 using OpenResKit.DomainModel;
 
 namespace OpenResKit.ODataHost
 {
   [ServiceBehavior(IncludeExceptionDetailInFaults = true)]
-  internal class DomainModelDataService : DataService<DomainModelContext>
+  internal class DomainModelDataService : EntityFrameworkDataService<DomainModelContext>
   {
     private readonly Func<DomainModelContext> m_CreateContext;
 
